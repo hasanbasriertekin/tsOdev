@@ -5,6 +5,18 @@
 // interface Movie {
 // Kodumuzu buraya yazıp interface'in yorum satırlarını kaldıralım...
 //}
+interface Movie {
+    // Kodumuzu buraya yazıp interface'in yorum satırlarını kaldıralım...
+    title: string;
+    originalTitle?: string;
+    director: string;
+    releaseYear: number;
+    boxOffice: {
+      budget: number,
+      grossUS: number,
+      grossWorldwide:number, 
+    };
+  }
 
 const dune: Movie = {
     title: "Dune",
@@ -40,3 +52,12 @@ const cats: Movie = {
 
 
 // Kodu buraya yazalım...
+
+function getProfit(movie: Movie): number {
+    const budget = movie.boxOffice.budget;
+    const grossWorldwide = movie.boxOffice.grossWorldwide;
+    return grossWorldwide - budget;
+  }
+  
+  const profitDune = getProfit(dune);
+  console.log(profitDune); 

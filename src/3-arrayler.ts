@@ -6,7 +6,7 @@
 
 
 // Kodu buraya yazalım...
-
+let ages: number[] = [];
 
 
 
@@ -20,7 +20,7 @@
 
 // Kodu buraya yazalım...
 
-
+let gameBoard: string[][] = [];
 
 
 // **********************************************
@@ -33,6 +33,10 @@
 
 // Kodu buraya yazalım...
 
+type Product = {
+    name: string;
+    price: number;
+  };
 
 
 
@@ -45,3 +49,6 @@
 
 
 // Kodu buraya yazalım...
+function getTotal(products: Product[]): number {
+    return products.reduce((total, product) => total + product.price, 0);
+  }
